@@ -8,7 +8,7 @@ Software Setup
 conda create -n PyAutoLens
 conda activate PyAutoLens
 #download packages needed
-astropy numba numpy scikit-image scikit-learn scipy
+astropy numba numpy scikit-image scikit-learn scipy autoconf
 
 conda activate PyAutoLens
 
@@ -30,4 +30,17 @@ pip install -r PyAutoFit/requirements.txt
 pip install -r PyAutoArray/requirements.txt
 pip install -r PyAutoGalaxy/requirements.txt
 pip install -r PyAutoLens/requirements.txt
+
+conda-develop PyAutoFit
+conda-develop PyAutoArray
+conda-develop PyAutoGalaxy
+conda-develop PyAutoLens
+
+pip install pytest
+pip install autoconf
+
+
+test working:
+cd /path/to/PyAutoFit
+python3 -m pytest
 
