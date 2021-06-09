@@ -18,3 +18,16 @@ conda install pip
 #use conda to install PyAutoLens dependencies
 pip install -r PyAutoLens/requirements.txt
 
+conda install conda-build
+conda-develop PyAutoLens
+
+git clone https://github.com/rhayes777/PyAutoFit
+git clone https://github.com/Jammy2211/PyAutoArray
+git clone https://github.com/Jammy2211/PyAutoGalaxy
+git clone https://github.com/Jammy2211/PyAutoLens
+
+pip install -r PyAutoFit/requirements.txt
+pip install -r PyAutoArray/requirements.txt
+pip install -r PyAutoGalaxy/requirements.txt
+pip install -r PyAutoLens/requirements.txt
+
