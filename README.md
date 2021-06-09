@@ -9,3 +9,5 @@ conda create -n PyAutoLens
 conda activate PyAutoLens
 #download packages needed
 astropy numba numpy scikit-image scikit-learn scipy
+
+conda activate PyAutoLens
