@@ -2,4 +2,10 @@
 
 Project choice: PyAutoLens
 
-Include what is needed for software to run -- include what is needed to work on system
+Software Setup
+
+#Create 
+conda create -n PyAutoLens
+conda activate PyAutoLens
+#download packages needed
+astropy numba numpy scikit-image scikit-learn scipy
