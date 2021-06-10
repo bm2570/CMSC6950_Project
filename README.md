@@ -25,8 +25,15 @@
 
 ## Software Setup and Installation
 
-### In the created conda environment, fruitbat is stalled by:
+### In the created conda environment, fruitbat is installed by:
 	pip3 install fruitbat
+	git clone https://github.com/abatten/fruitbat
 	cd fruitbat
 	pip install .
+
+### Once installed, run the following python code to test everything has installed correctly:
+
+	python3 test.py
+
+### you should obtain the output *26.05327033996582 pc / cm3*
 
