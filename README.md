@@ -1,6 +1,6 @@
-#CMSC6950 Project: Fruitbat
+# CMSC6950 Project: Fruitbat
 
-##Software Setup
+## Software Setup
 
 ### To run Python codes in the fruitbat open source code, you will need to download several modules.
 
