@@ -39,5 +39,5 @@
 
 
 ## What is fruitbat used for?
-
+ change ordering - fruitbat first then packages
 ## How to use fruitbat
