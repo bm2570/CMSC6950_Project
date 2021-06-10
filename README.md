@@ -44,3 +44,13 @@ test working:
 cd /path/to/PyAutoFit
 python3 -m pytest
 
+
+
+##### TEST CHANGE TO FRUITBAT
+conda create -n Fruitbat
+conda activate Fruitbat
+pip install --upgrade setuptools
+pip install numpy scipy astropy matplotlib pandas pyymw16 e13tools
+pip install fruitbat
+
+
