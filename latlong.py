@@ -1,30 +1,23 @@
 import fruitbat
 import numpy as np
-dat_zhang=[]
-dat_inoue=[]
-dat_ioka=[]
 
-#for i in np.linspace(10, 5000, num=500):
 
-#    frb_zhang = fruitbat.Frb(i,method="Zhang2018")
- #   frb_ioka = fruitbat.Frb(i,method="Ioka2003")
-  #  frb_inoue = fruitbat.Frb(i,method="Inoue2004")
+zhangdat=[]
+inouedat=[]
+iokadat=[]
 
-#    dat_zhang.append((i, frb_zhang.calc_redshift(method="Zhang2018"), frb_zhang.calc_comoving_distance().value, frb_zhang.calc_luminosity_distance().value ))
- 
- #   dat_inoue.append((i, frb_inoue.calc_redshift(method="Inoue2004"), frb_inoue.calc_comoving_distance().value, frb_inoue.calc_luminosity_distance().value ))
- 
- #  dat_ioka.append((i, frb_ioka.calc_redshift(method="Ioka2003"), frb_ioka.calc_comoving_distance().value, frb_ioka.calc_luminosity_distance().value ))
-
-#np.savetxt('distance_zhang.dat',dat_zhang)
-#np.savetxt('distance_inoue.dat',dat_inoue)
-#np.savetxt('distance_ioka.dat',dat_ioka)
-test=[]
-for i in np.linspace(-90,90,10):
-    for j in np.linspace(-90,90,10):
+for i in np.linspace(-90,90,180):
+    for j in np.linspace(-90,90,180):
         gl_var=str(i)
         gb_var=str(j)
         frb_zhang = fruitbat.Frb(600,method="Zhang2018",gl=gl_var,gb=gb_var)
-        test.append((i,frb_zhang.calc_dm_galaxy().value,frb_zhang.calc_redshift(method="Zhang2018")))
-np.savetxt('latlon.dat',test)
+        frb_inoue = fruitbat.Frb(600,method="Inoue2004",gl=gl_var,gb=gb_var)
+        frb_ioka = fruitbat.Frb(600,method="Ioka2003",gl=gl_var,gb=gb_var)
+        zhangdat.append((i,j,frb_zhang.calc_dm_galaxy().value,frb_zhang.calc_redshift(method="Zhang2018")))
+        iokadat.append((i,j,frb_ioka.calc_dm_galaxy().value,frb_ioka.calc_redshift(method="Ioka2003")))
+        inouedat.append((i,j,frb_inoue.calc_dm_galaxy().value,frb_inoue.calc_redshift(method="Inoue2004")))
+
+np.savetxt('latlon_zhang.dat',zhangdat)
+np.savetxt('latlon_inoue.dat',inouedat)
+np.savetxt('latlon_ioka.dat',iokadat)
 
