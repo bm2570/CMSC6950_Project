@@ -1,5 +1,7 @@
 # CMSC6950 Project: Fruitbat
 
+## What is Fruitbat and What is it Used For?
+
 ## Precursory Requirements
 
 ### We will be using the conda environment for the fruitbat code. We Assume you already have conda installed and have working knowledge on it. If not, you can view the documentation [here](https://docs.conda.io/en/latest/).
@@ -37,11 +39,3 @@
 
 ### you should obtain the output *26.05327033996582 pc / cm3*
 
-
-## What is fruitbat used for?
- change ordering - fruitbat first then packages
-## How to use fruitbat
-
-## project idea
-1) FIG 1: redshift vs DM for 3 methods
-2) Look at different cosmologies for the three methods over a fixed DM range
