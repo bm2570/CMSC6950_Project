@@ -18,6 +18,8 @@ ioka_redshift = ioka[:,1]
 ioka_comoving = ioka[:,2]
 ioka_lum = ioka[:,3]
 
+
+#Z(DM) plot
 plt.figure(1)
 plt.subplot(111)
 plt.plot( dm,zhang_redshift)
@@ -32,7 +34,7 @@ plt.suptitle('Redshift (Z) vs Dispersion Measure (DM)')
 plt.legend(["Zhang2018", "Ioka2003", "Inoue2004"])
 plt.savefig('Z_vs_DM.png',dpi=1000)
 
-
+#d_C(DM) and d_L(DM) plots
 plt.figure(2)
 ax1=plt.subplot(211)
 ax1.title.set_text('Comoving Distance (d$_C$) vs Dispersion Measure (DM)')

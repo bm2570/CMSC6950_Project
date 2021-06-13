@@ -56,7 +56,7 @@ if plottype=='Z': ## Redshift
     zi = griddata((X, Y), Z, (xi[None,:], yi[:,None]))
         
 # Creating heat map
-    fig2=plt.contourf(xi, yi, zi, 15, cmap=plt.cm.rainbow)#,vmax=zmax, vmin=zmin)
+    fig2=plt.contourf(xi, yi, zi, 15, cmap=plt.cm.rainbow)
     cbar2=plt.colorbar()  
     cbar2.set_label('Redshift')
     plt.suptitle(title)
