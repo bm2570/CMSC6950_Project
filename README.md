@@ -41,3 +41,8 @@ We use *fruitbat* in this project in a series of scripts to calculate cosmologic
 `distance_calculations.py` uses the *calc_redshift()*, *calc_comoving_distance()*, and *calc_luminosity_distance()* functions to calculate the redshift, comoving distance and luminosity distances for these methods.
 
 `latlong.py` uses the *calc_dm_galaxy()* and *calc_redshift()* functions to determine the dispersion measure contribution from the Milky Way and its associated redshift over a defined grid of latitude and longitude coordinates.
+
+## Running the Project 
+
+Running the make file provided will produce the pdf file and the finalized figures. 
+Note: This will take several minutes to run. Any flags output to the screen are just warnings from the *fruitlab* package and do not affect any of the results.
