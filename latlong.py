@@ -1,3 +1,4 @@
+### This script calculates the dispersion measure and redshift over the range of latitude and longitude coordinates from [-90,90] degrees for the "Zhang2018", "Ioka2003", and "Inoue2004" methods
 import fruitbat
 import numpy as np
 
@@ -6,8 +7,8 @@ zhangdat=[]
 inouedat=[]
 iokadat=[]
 
-for i in np.linspace(-90,90,180):
-    for j in np.linspace(-90,90,180):
+for i in np.linspace(-90,90,100):
+    for j in np.linspace(-90,90,100):
         gl_var=str(i)
         gb_var=str(j)
         frb_zhang = fruitbat.Frb(600,method="Zhang2018",gl=gl_var,gb=gb_var)
