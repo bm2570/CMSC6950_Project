@@ -35,5 +35,5 @@
 
 ### Once installed, run the following python code to test everything has installed correctly:
 	python3 test.py
-### If you obtain the output *26.05327033996582 pc / cm3*, the package is ready to use.
+### If you obtain the output *26.05327033996582 pc / cm3*, the package has installed correctly and is ready to use.
 
