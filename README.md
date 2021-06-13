@@ -45,4 +45,4 @@ We use *fruitbat* in this project in a series of scripts to calculate cosmologic
 ## Running the Project 
 
 Running the make file provided will produce the pdf file and the finalized figures. 
-Note: This will take several minutes to run. Any flags output to the screen are just warnings from the *fruitlab* package and do not affect any of the results.
+Note that this will take approximately 10 minutes to run. Any flags outputted to the screen are just warnings from the *fruitlab* package that not affect any of the results.
