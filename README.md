@@ -37,3 +37,9 @@
 	python3 test.py
 ### If you obtain the output *26.05327033996582 pc / cm3*, the package has installed correctly and is ready to use.
 
+## Usage of *fruitbat*
+We use *fruitbat* in this project in a series of scripts to calculate cosmological properties using three methods referred to as **Zhang2018**, **Ioka2003**, and **Inoue2004**.
+
+`distance_calculations.py` uses the *calc_redshift()*,*calc_comoving_distance()*, and *calc_luminosity_distance()* functions to calculate the redshift, comoving distance and luminosity distances for these methods.
+
+`latlong.py` uses the *calc_dm_galaxy()* and *calc_redshift()* functions to determine the dispersion measure contribution from the Milky Way and its associated redshift over a defined grid of latitude and longitude coordinates.
