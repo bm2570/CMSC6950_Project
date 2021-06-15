@@ -1,5 +1,6 @@
-report.pdf: refs.bib output report.tex	
+report.pdf: refs.bib report.tex	
 	latexmk -pdf
 
 output: project.sh
-	./project.sh
+	bash ./project.sh
+
