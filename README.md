@@ -30,7 +30,7 @@
 ### If you obtain the output *26.05327033996582 pc / cm3*, the package has installed correctly and is ready to use.
 
 ## Usage of *fruitbat*
-*fruitbat* in this project in a series of scripts to calculate cosmological properties using three methods referred to as **[Zhang2018](https://arxiv.org/pdf/1808.05277.pdf)**, **[Ioka2003](https://arxiv.org/pdf/astro-ph/0309200.pdf)**, and **[Inoue2004](https://academic.oup.com/mnras/article/348/3/999/1279487)**.
+*fruitbat* is used in this project in a series of scripts to calculate cosmological properties using three methods referred to as **[Zhang2018](https://arxiv.org/pdf/1808.05277.pdf)**, **[Ioka2003](https://arxiv.org/pdf/astro-ph/0309200.pdf)**, and **[Inoue2004](https://academic.oup.com/mnras/article/348/3/999/1279487)**.
 
 `distance_calculations.py` uses the *calc_redshift()*, *calc_comoving_distance()*, and *calc_luminosity_distance()* functions to calculate the redshift, comoving distance and luminosity distances for these methods.
 
