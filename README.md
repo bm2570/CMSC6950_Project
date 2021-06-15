@@ -18,15 +18,20 @@
 
 ## Software Setup and Installation
 
-### *fruitbat* is installed by:
+### *fruitbat* is install by using either using pip:
 	pip install fruitbat
-	pip install fruitbat
+	
+### or by cloning the repository:
 	git clone https://github.com/abatten/fruitbat
 	cd fruitbat
 	pip install .
 
+### For the purposes of this project, using pip is sufficient. 
+### **Note:** if this project is being downloaded on a linux machine that an error may be displayed to the screen due to the *pyymw16* package. If this occurs, the *fruitbat* should be fine, however you should refer to the documentation [here](https://pypi.org/project/fruitbat/) if any issues arise..
+
+
 ### Once installed, run the following python code to test everything has installed correctly:
-	python3 ../test.py
+	python3 test.py
 ### If you obtain the output *26.05327033996582 pc / cm3*, the package has installed correctly and is ready to use.
 
 ## Usage of *fruitbat*
