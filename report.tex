@@ -1,11 +1,12 @@
 \documentclass{article}
 \usepackage{graphicx}
+%\graphicspath{/report}
+
 \usepackage{mathrsfs}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{subfig}
-\usepackage{mwe}
 \title{Using {\it fruitbat} to Investigate Dispersion Measure and Redshift Dependencies for an Intergalactic Medium}
 \author{Brad McNiven}
 \date{June 2021}
@@ -18,9 +19,9 @@
 
 \section{Introduction}
 
-Fast radio bursts (FRBs) are transient radio pulses which last on the order of a few milliseconds. FRBs are an interesting astronomical phenomenon, as they are of unknown origin and their sources appear to reside outside of the Milky Way galaxy \cite{Petroff}. One of their most interesting features is their abnormally large dispersion measure ($DM$), which is mathematically an integrated density of electrons between the source and the relative observer. Given the exponentially large distances between Earth and interstellar sources of FRBs, $DM$ measurements of a FRB source is extremely difficult given the insufficient resolution of current day telescopes. By instead studying the redshift ($Z$) of a source, which is a doppler relation containing the spectral lines (wavelength) of the source and how it is observed on earth, and $DM$ relations via numeric and analytic means with previously collected astronomical data, one can estimate many other related cosmological effects.
+Fast radio bursts (FRBs) are transient radio pulses which last on the order of a few milliseconds. FRBs are an interesting astronomical phenomenon, as they are of unknown origin and their sources appear to reside outside of the Milky Way galaxy \cite{Petroff}. One of their most interesting features is their abnormally large dispersion measure ($DM$), which is mathematically an integrated density of electrons between the source and the relative observer. Given the exponentially large distances between Earth and interstellar sources of FRBs, $DM$ measurements of a FRB source are extremely difficult given the insufficient resolution of modern telescopes. By instead studying the redshift ($Z$) of a source, which is a doppler relation containing the spectral lines (wavelength) of the source and how it is observed on earth, and $DM$ relations via numeric and analytic means with previously collected astronomical data, one can estimate many other related cosmological effects.
 
-In this project, the third party open source Python package called {\it fruitbat} \cite{fruitbat} is used to calculate this relation between $DM$ and $Z$ via three different methods. Each method uses different sets of cosmological parameters which in turn result in a different numerical result. {\it fruitbat} is used in this project to study the redshift as a function of dispersion measure for a static position in the universe, while also as functions of its latitude and longitude. Since the determination of both of these quantities allows for one to determine other astronomical properties, we demonstrate this by presenting the comoving and luminosity distance curves as functions of dispersion measure.
+In this project, the third party open source Python package called {\it fruitbat} \cite{fruitbat} is used to calculate this relation between $DM$ and $Z$ via three different methods. Each method uses different sets of cosmological parameters which in turn result in a different numerical result. {\it fruitbat} is used in this project to study the redshift as a function of dispersion measure for a static position in the universe, while also as functions of its latitude and longitude. Since the calculation of both of these quantities allows for one to determine other astronomical properties, we demonstrate this by presenting the comoving and luminosity distance curves as functions of dispersion measure.
 
 \section{Method \& Theory}
 
@@ -48,9 +49,9 @@ The third method investigated, referred to as Inoue2004 \cite{Inoue2004}, assume
 \begin{equation}
     DM=9.2\times10^{-10}c H_0 \Omega_b F(Z).
 \end{equation}
-It is noted that all calculations performed are performed using the Planck18 comological parameter set \cite{Planck2018}, where $H_0=67.66$, $\Omega_b=0.04897$, $\Omega_m=0.3111$, $\Omega_\Lambda=0.6874$, and $w=-1$.
+It is noted that all calculations performed were done so using the Planck18 comological parameter set \cite{Planck2018}, where $H_0=67.66$, $\Omega_b=0.04897$, $\Omega_m=0.3111$, $\Omega_\Lambda=0.6874$, and $w=-1$.
 
-{\it fruitbat} was used by first intializing the \emph{fruitbat.Frb()} function where a dispersion measure, and the method used was called in via \emph{method="methodX"}. Additional parameters were called into the function when specifying specific latitude and longitude coordinates via \emph{gl=X} and \emph{gb=Y}, respectively. Once a numerical result is obtained, the redshift was then obtained using the \emph{calc\_redshift()} function and any other properties dependent on $Z$. For example, the comoving and luminosity functions can be called in once the redshift is calculated, using \emph{calc\_comoving\_distance()} and \emph{calc\_luminosity\_distance()} respectively. Note that these two functions return \emph{ astropy.units.quantity.Quantity} datatypes, meaning one must provide \emph{.value} at the end of the function call to store the numerical result.
+{\it fruitbat} was used by first intializing the \emph{fruitbat.Frb()} function where a dispersion measure range was used (0-5000) was fed into the function along with the specific method used for each calculation via \emph{method="methodX"}. Additional parameters were called into the function when specifying specific latitude and longitude coordinates via \emph{gl=X} and \emph{gb=Y}, respectively. Once a numerical result is obtained, the redshift was then obtained using the \emph{calc\_redshift()} function, followed by any other properties dependent on $Z$. In particular, the redshift dependent comoving and luminosity functions can be called in once the redshift is calculated by using the functions \emph{calc\_comoving\_distance()} and \emph{calc\_luminosity\_distance()} respectively. Note these two functions return {$\langle$\emph{astropy.units.quantity.Quantity}$\rangle$} datatypes, meaning one must provide \emph{.value} at the end of the function call to store the numerical result.
 
 \section{Results and Discussion}
 
@@ -64,11 +65,11 @@ We first present the redshift as a function of dispersion measure for a given FR
 \label{fig:ZvDM}
 \end{figure}
 
-With knowledge on $Z$, many other properties can now be investigated. We demonstrate this by calculating the comoving distance, which is the distance between the FRB source and earth without factoring in the expansion of the universe. This is mathematically defined as
+With knowledge of $Z$, many other properties can now be investigated. We demonstrate this by calculating the comoving distance, which is the distance between the FRB source and earth without factoring in the expansion of the universe. This is mathematically defined as
 \begin{equation}
 d_C(Z)=\frac{c}{H_0} \int_0^Z \frac{dz^\prime}{ \sqrt{\Omega_r (1+z^\prime)^4 +\Omega_m (1+z^\prime)^3 + \Omega_\Lambda}  },
 \end{equation} 
-respectively, where $\Omega_r$ is the radiation density. We can also look at the luminosity distance, a quantity relating the apparent and absolute magnitude of the FRB source, defined as
+where $\Omega_r$ is the radiation density. We can also look at the luminosity distance, a quantity relating the apparent and absolute magnitude of the FRB source, defined as
 \begin{equation}
 d_L(Z)=(1+Z)d_C(Z).
 \end{equation}
@@ -108,7 +109,7 @@ From the figure, we see that each of the three methods appears to result in the 
 
 We also look at the redshift for a given set of latitude and longitude coordinates, shown in the heatmap presented in Fig \ref{fig:heatplotZ}. Here we see that all probed latitude coordinates confined within a longitude range of -$20^\circ-20^\circ$ results in the same structure, however different structure appears outside of these bounds for each method. 
 
-We look to study these structural differences further by performing a cut in the heatplot, with the latitude fixed at -$0.909^\circ$. This result is shown in Fig \ref{fig:heatplotcut}, along with a cut from Fig \ref{fig:heatmapDM} at the same fixed latitude for completeness.
+We look to study these structural differences further by performing a ``cut'' in the heatplot, with the latitude fixed at -$0.909^\circ$. This result is shown in Fig \ref{fig:heatplotcut}, along with a cut from Fig \ref{fig:heatmapDM} at the same fixed latitude for completeness.
 
 \begin{figure}[!htb]
 \centering
@@ -122,7 +123,7 @@ From Fig \ref{fig:heatplotcut}(a), we find that the three methods do in fact to 
 
 \section{Conclusion}
 
-In this project, the third party open source package \emph{fruitbat} was used to determine the relation between dispersion measure and redshift for the the methods Zhang2018, Ioka2003 and Inoue2004 which differ based on the universal assumptions made. Redshift as a function of dispersion measure curves were produced for each of the three methods, indicating each to produce differing results. These redshift values were used to then calculate the comoving and luminosity distance differences which arise between the three methods. The coordinate specification power of the \emph{fruitbat} package was also taken advatage of, where the dispersion measure and redshift contributions from the Milky Way were investigated over a range of latitude and longitude coordinates. These results were shown as heatplots, where the dispersion measure was found to be the same for each method while the redshift was found to differ for coordinates residing outside of the longitudinal coordinates -$20^\circ-20^\circ$. These differences were further investigated by cuts taken of each heatmap near a latitude of $0^\circ$.
+In this project, the third party open source package \emph{fruitbat} was used to determine the relation between dispersion measure and redshift for the the methods Zhang2018, Ioka2003, and Inoue2004, which differ based on the universal assumptions made. Redshift as a function of dispersion measure curves were produced for each method where differences in each of the three curves was observed. These redshift values were used to then calculate the differences in their comoving and luminosity distances. The coordinate specification power of the \emph{fruitbat} package was also exploited, such that the dispersion measure and associated redshift from the Milky Way were investigated over a range of latitude and longitude coordinates. These results were shown as heatplots, where the dispersion measure was found to be the same for each method while the redshift was found to differ for longitudinal coordinates outside of the range -$20^\circ-20^\circ$. These differences were further investigated by cuts taken of each heatmap, near a latitude of $0^\circ$.
 
 \bibliographystyle{ieeetr}
 \bibliography{refs}
