@@ -11,14 +11,14 @@ awk '$1==-9.090909090909065071e-01 {print}' latlon_inoue.dat > latcut_inoue.dat
 awk '$1==-9.090909090909065071e-01{print}' latlon_zhang.dat > latcut_zhang.dat
 awk '$1==-9.090909090909065071e-01{print}' latlon_ioka.dat > latcut_ioka.dat
 python3 plot_latlongcuts.py
-mv distance_vs_DM.png ./report/
-mv DM_heatplot_Inoue2004.png ./report/
-mv DM_heatplot_Ioka2003.png ./report/
-mv DM_heatplot_Zhang2018.png ./report/
-mv DM_vs_longitude.png ./report/
-mv redshift_heatplot_Inoue2004.png ./report/
-mv redshift_heatplot_Ioka2003.png ./report/
-mv redshift_heatplot_Zhang2018.png ./report/
-mv Z_vs_DM.png ./report/
-mv Z_vs_longitude.png ./report/
+mv distance_vs_DM.png ./figures/
+mv DM_heatplot_Inoue2004.png ./figures/
+mv DM_heatplot_Ioka2003.png ./figures/
+mv DM_heatplot_Zhang2018.png ./figures/
+mv DM_vs_longitude.png ./figures/
+mv redshift_heatplot_Inoue2004.png ./figures/
+mv redshift_heatplot_Ioka2003.png ./figures/
+mv redshift_heatplot_Zhang2018.png ./figures/
+mv Z_vs_DM.png ./figures/
+mv Z_vs_longitude.png ./figures/
 rm *.dat
