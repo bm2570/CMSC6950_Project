@@ -6,4 +6,6 @@ report: project.sh
 
 clean:
 	latexmk -c
+	rm *.dat
+	rm *.bbl
 

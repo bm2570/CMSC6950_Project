@@ -21,4 +21,3 @@ mv redshift_heatplot_Ioka2003.png ./figures/
 mv redshift_heatplot_Zhang2018.png ./figures/
 mv Z_vs_DM.png ./figures/
 mv Z_vs_longitude.png ./figures/
-rm *.dat
