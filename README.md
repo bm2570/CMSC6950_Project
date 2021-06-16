@@ -14,12 +14,12 @@
 	5.) pandas
 	6.) pyymw16
 	7.) e13tools
-### These will be downloaded when the *fruitbat* package is downloaded. *fruitbat* is downloaded by the commands in the following section.
+### These will be downloaded with the *fruitbat* package if they are already not installed to your computer. *fruitbat* download commands are shown in the following section.
 
 ## Software Setup and Installation
 
 ### *fruitbat* is install by using either using pip:
-	pip install fruitbat
+	pip3 install fruitbat
 	
 ### or by cloning the repository:
 	git clone https://github.com/abatten/fruitbat
@@ -43,5 +43,5 @@
 
 ## Running the Project 
 
-Running the make file provided will produce the pdf file and the finalized figures. 
-Note that this will take approximately 10 minutes to run. Any flags outputted to the screen are just warnings from the *fruitlab* package that not affect any of the results.
+Running the make file provided will produce the pdf file and the finalized figures. To do so just simply type `make`. 
+Note that this will take approximately 10 minutes to run. Any flags outputted to the screen from the *fruitbat* package or *latex* are just warnings and do not affect any of the results.
