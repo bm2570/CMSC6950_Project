@@ -2,18 +2,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #Importing data 
-zhang = np.genfromtxt('latcut_zhang.dat', delimiter=' ',skip_header=0)
+zhang = np.genfromtxt('latcut_Zhang2018.dat', delimiter=' ',skip_header=0)
 lat= zhang[:,0]
 lon_zhang = zhang[:,1]
 calcdm_zhang = zhang[:,2]
 redshift_zhang = zhang[:,3]
 
-ioka = np.genfromtxt('latcut_ioka.dat', delimiter=' ',skip_header=0)
+ioka = np.genfromtxt('latcut_Ioka2003.dat', delimiter=' ',skip_header=0)
 lon_ioka = ioka[:,1]
 calcdm_ioka = ioka[:,2]
 redshift_ioka = ioka[:,3]
 
-inoue = np.genfromtxt('latcut_inoue.dat', delimiter=' ',skip_header=0)
+inoue = np.genfromtxt('latcut_Inoue2004.dat', delimiter=' ',skip_header=0)
 lon_inoue = inoue[:,1]
 calcdm_inoue = inoue[:,2]
 redshift_inoue = inoue[:,3]
