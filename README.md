@@ -49,3 +49,4 @@
 
 Running the make file for this project will produce the pdf file and the finalized figures. To do so just simply type `make`. 
 Note that this will take approximately 10 minutes to run. Any flags outputted to the screen from the *fruitbat* package or *latex* are just warnings and do not affect any of the results.
+Running `make clean` will remove all temporary latex files as well as all created png and data files.
