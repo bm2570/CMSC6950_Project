@@ -5,11 +5,11 @@ import sys
 
 fname=sys.argv[1] #use latlon data files
 plottype=sys.argv[2] # use DM for dispersion measure and Z for redshift
-if fname=='latlon_zhang.dat':
+if fname=='latlon_Zhang2018.dat':
     title='Zhang2018'
-if fname=='latlon_ioka.dat':
+if fname=='latlon_Ioka2003.dat':
     title='Ioka2003'
-if fname=='latlon_inoue.dat':
+if fname=='latlon_Inoue2004.dat':
     title='Inoue2004'
     
 # Load in data

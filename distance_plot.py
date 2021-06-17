@@ -2,18 +2,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 #Importing data 
-zhang = np.genfromtxt('distance_zhang.dat', delimiter=' ',skip_header=0)
+zhang = np.genfromtxt('distance_Zhang2018.dat', delimiter=' ',skip_header=0)
 dm = zhang[:,0]
 zhang_redshift = zhang[:,1]
 zhang_comoving = zhang[:,2]
 zhang_lum = zhang[:,3]
 
-inoue = np.genfromtxt('distance_inoue.dat', delimiter=' ',skip_header=0)
+inoue = np.genfromtxt('distance_Inoue2004.dat', delimiter=' ',skip_header=0)
 inoue_redshift = inoue[:,1]
 inoue_comoving = inoue[:,2]
 inoue_lum = inoue[:,3]
 
-ioka = np.genfromtxt('distance_ioka.dat', delimiter=' ',skip_header=0)
+ioka = np.genfromtxt('distance_Ioka2003.dat', delimiter=' ',skip_header=0)
 ioka_redshift = ioka[:,1]
 ioka_comoving = ioka[:,2]
 ioka_lum = ioka[:,3]
