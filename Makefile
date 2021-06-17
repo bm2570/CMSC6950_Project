@@ -68,5 +68,3 @@ clean:
 	latexmk -c
 	rm *.dat
 	rm *.png
-	rm *.bbl
-
